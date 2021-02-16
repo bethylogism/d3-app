@@ -8,7 +8,7 @@ import { line as d3Line } from 'd3-shape';
 import { axisBottom, axisLeft } from 'd3-axis'; // d3-axis does mutate the DOM.
 import { select } from 'd3-selection';
 
-type NumberValue = number | { valueOf(): number };
+type NumberValue = number | { valueOf(): string };
 
 type Datum = {
   day: Date;
@@ -16,7 +16,7 @@ type Datum = {
 };
 
 // type Data = Datum[]; // durt
-type Data = [NumberValue, NumberValue][]; // I think it's gon have to be a Map/ arr of nums. Cause it need length
+type Data = NumberValue[]; // I think it's gon have to be a Map/ arr of nums. Cause it need length
 
 type Props = {
   data: Data; // this actually needs to be like the VALUES

@@ -28,7 +28,7 @@ function App() {
         data={mockData}
         height={40}
         selectX={datum => new Date(datum.day)}
-        selectY={datum => parseFloat(datum.productPerceivedQuality)}
+        selectY={datum => datum.productPerceivedQuality}
         width={200}
       />
     </div>
